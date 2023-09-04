@@ -1,0 +1,12 @@
+.forgotPassword {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+}

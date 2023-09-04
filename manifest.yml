@@ -1,0 +1,11 @@
+---
+applications:
+  - name: traver-react
+    disk_quota: 500M
+    instances: 1
+    memory: 500M
+    stack: cflinuxfs4
+    buildpack: staticfile_buildpack
+    path: build/
+    routes:
+      - route: traver.cfapps.us10-001.hana.ondemand.com

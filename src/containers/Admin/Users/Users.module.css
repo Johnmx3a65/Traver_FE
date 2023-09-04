@@ -1,0 +1,29 @@
+.usersContainer {
+  padding: 10px;
+}
+
+.searchContainer {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.addButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addButton {
+  background-color: #1976d2;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #1976d2;
+}
+
+.addButton:hover {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  color: #fff;
+}

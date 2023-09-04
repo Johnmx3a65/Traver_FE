@@ -1,0 +1,63 @@
+.categoryContainer {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px 5px 5px;
+  gap: 10px;
+
+  height: 54px;
+
+  background: #ffffff;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.categoryContainer:hover {
+  border-color: gold;
+}
+
+.categoryContainerActive {
+  border-color: gold;
+}
+
+.categoryIconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  gap: 10px;
+
+  width: 44px;
+  height: 44px;
+
+  background: #fafafa;
+  border-radius: 15px;
+}
+
+.categoryIcon {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 10px;
+}
+
+.categoryLink {
+  height: 26px;
+
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+
+  letter-spacing: 0.01em;
+
+  color: #0c0507 !important;
+}

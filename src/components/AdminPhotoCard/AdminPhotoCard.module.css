@@ -1,0 +1,21 @@
+.contentLabels {
+  color: #838688;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 333.333% */
+  font-variant: small-caps;
+  letter-spacing: 0.075rem;
+}
+
+.contentValues {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.075rem;
+  text-transform: lowercase;
+}

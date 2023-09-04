@@ -1,0 +1,26 @@
+.link {
+  text-decoration: none;
+  letter-spacing: 0.01em;
+
+  color: #bababa;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  column-gap: 10px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.categoryList::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryItem {
+  cursor: pointer;
+}

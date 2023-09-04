@@ -1,0 +1,60 @@
+.contentPairs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.contentSingles {
+  margin-bottom: 0.5rem;
+}
+
+.contentLabels {
+  color: #838688;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 333.333% */
+  font-variant: small-caps;
+  letter-spacing: 0.075rem;
+}
+
+.contentValues {
+  width: 8rem;
+
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 333.333% */
+  font-variant: small-caps;
+  letter-spacing: 0.075rem;
+}
+
+.contentPicture {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.075rem;
+  text-transform: lowercase;
+}
+
+.contentDescription {
+  color: #000;
+  text-align: justify;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-variant: small-caps;
+  letter-spacing: 0.075rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
