@@ -46,7 +46,7 @@ const TraverNavbar = ({ isAdminPage, window }) => {
         }),
       );
     } else {
-      if (user?.role !== 'USER') {
+      if (user?.role !== 'USER' && user?.role !== 'ADMIN') {
         navigate('/login');
         return;
       }
