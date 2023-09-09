@@ -46,6 +46,10 @@ const TraverNavbar = ({ isAdminPage, window }) => {
         }),
       );
     } else {
+      if (user?.role !== 'USER') {
+        navigate('/login');
+        return;
+      }
       setPublicItems((prev) =>
         prev.map((i) => {
           i.isActive = i.url === currentLocation;
