@@ -48,7 +48,9 @@ const LocationDetails = () => {
       <Typography variant='h5' component='h5' marginBottom='0.5rem'>
         Описание
       </Typography>
-      <Typography paragraph>{location?.description}</Typography>
+      <Typography paragraph sx={{ whiteSpace: 'pre-line' }}>
+        {location?.description}
+      </Typography>
       {photos?.length > 0 && (
         <Box marginBottom='1rem'>
           <Typography variant='h5' component='h5' marginBottom='0.5rem'>
@@ -74,7 +76,7 @@ const LocationDetails = () => {
                 key: 'AIzaSyAiwj0N_l_1uepEWDcMP-LiQxciXrtHfVc',
                 language: 'bg',
               }}
-              defaultZoom={15}
+              defaultZoom={12}
               center={center}
             >
               <PlaceIcon lat={center.lat} lng={center.lng} />
