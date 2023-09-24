@@ -1,35 +1,9 @@
-.centeredContainer {
-  justify-content: center;
-  align-items: center;
-  min-height: 500px;
-}
-
 .locationPhoto {
   width: 100%;
   max-height: 600px;
   border-radius: 20px;
   object-fit: cover;
   margin-bottom: 1rem;
-}
-
-.galleryPhoto {
-  border-radius: 20px;
-}
-
-.arrowBack {
-  cursor: pointer;
-}
-
-.arrowBack:hover {
-  color: #ffd700;
-}
-
-.favoriteIcon {
-  cursor: pointer;
-}
-
-.favoriteIcon:hover {
-  color: #ffd700;
 }
 
 .photosContainer {
