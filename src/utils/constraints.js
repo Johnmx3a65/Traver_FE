@@ -1,5 +1,6 @@
 export const ALERT_MESSAGE_ON_SUCCESS = 'Успешно извършена операция';
 export const ALERT_MESSAGE_ON_FAILURE = 'Възникна неочаквана грешка';
+export const ALERT_MESSAGE_ON_SUCCESSFUL_REGISTRATION = 'Успешно регистрирахте се в системата';
 export const ALERT_MESSAGE_ON_SUCCESSFUL_PASSWORD_RESET = 'Успешно променихте паролата си';
 export const ALERT_MESSAGE_CATEGORY_ALREADY_EXIST = 'Категория с таково име вече съществува';
 export const ALERT_MESSAGE_LOCATION_ALREADY_EXIST = 'Локацията вече съществува';
