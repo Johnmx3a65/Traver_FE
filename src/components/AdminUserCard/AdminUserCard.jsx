@@ -1,5 +1,5 @@
 import styles from './AdminUserCard.module.css';
-import { Box, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, IconButton, Tooltip, Typography } from '@mui/material';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import React, { Fragment } from 'react';
@@ -15,12 +15,16 @@ const AdminUserCard = ({ user, onEdit, onDelete }) => {
         }
         action={
           <Fragment>
-            <IconButton onClick={onEdit}>
-              <EditOutlinedIcon />
-            </IconButton>
-            <IconButton onClick={onDelete}>
-              <DeleteOutlinedIcon />
-            </IconButton>
+            <Tooltip title={'Промени потребител'}>
+              <IconButton onClick={onEdit}>
+                <EditOutlinedIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={'Изтрий потребител'}>
+              <IconButton onClick={onDelete}>
+                <DeleteOutlinedIcon />
+              </IconButton>
+            </Tooltip>
           </Fragment>
         }
       />
