@@ -25,7 +25,7 @@ export const UserSchema = z.object({
 });
 
 export const UserDefaultValues = {
-  id: null,
+  id: '',
   email: '',
   name: '',
   role: 'USER',

@@ -28,7 +28,7 @@ export const CategorySchema = z.object({
 });
 
 export const CategoryDefaultValues = {
-  id: null,
+  id: '',
   name: '',
   picture: '',
 };
