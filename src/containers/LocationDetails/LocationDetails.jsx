@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import styles from './LocationDetail.module.css';
-import { Box, Typography } from '@mui/material';
+import { Box, IconButton, Tooltip, Typography } from '@mui/material';
 import GoogleMapReact from 'google-map-react';
 import PlaceIcon from '@mui/icons-material/Place';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -36,12 +36,28 @@ const LocationDetails = () => {
     <Fragment>
       <PhotoModal photo={photo} open={isModalOpen} onClose={onPhotoClick} />
       <Box display='flex' justifyContent='space-between' marginBottom='1rem'>
-        <ArrowBackIcon onClick={() => navigate(-1)} className={styles.arrowBack} />
+        <Tooltip title={'Назад'}>
+          <IconButton>
+            <ArrowBackIcon onClick={() => navigate(-1)} />
+          </IconButton>
+        </Tooltip>
         <Typography variant='h5' component='h5'>
           {location?.name}
         </Typography>
-        <Box component='span' className={styles.favoriteIcon} onClick={toggleFavorite}>
-          {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        <Box component='span' onClick={toggleFavorite}>
+          {isFavorite ? (
+            <Tooltip title={'Премахни от любими'}>
+              <IconButton>
+                <FavoriteIcon />
+              </IconButton>
+            </Tooltip>
+          ) : (
+            <Tooltip title={'Запази в любими'}>
+              <IconButton>
+                <FavoriteBorderIcon />
+              </IconButton>
+            </Tooltip>
+          )}
         </Box>
       </Box>
       <Box component='img' src={location?.picture} alt={location?.name} className={styles.locationPhoto} />
@@ -58,9 +74,20 @@ const LocationDetails = () => {
           </Typography>
           <Box className={styles.photosContainer}>
             {photos?.map((item, i) => (
-              <Box key={'photo- ' + item.id} paddingRight='0.5rem' onClick={() => onPhotoClick(item)}>
-                <img src={item.previewUrl} alt={'img-' + i} />
-              </Box>
+              <Tooltip key={'photo- ' + item.id} title={'Увеличи снимката'}>
+                <Box
+                  component='img'
+                  src={item.previewUrl}
+                  alt={'img-' + i}
+                  sx={{
+                    paddingRight: '0.5rem',
+                    ':hover': {
+                      cursor: 'pointer',
+                    },
+                  }}
+                  onClick={() => onPhotoClick(item)}
+                />
+              </Tooltip>
             ))}
           </Box>
         </Box>

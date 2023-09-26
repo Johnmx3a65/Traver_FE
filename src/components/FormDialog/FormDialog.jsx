@@ -18,7 +18,7 @@ const FormDialog = ({ zodSchema, defaultValues, entity, children, title, open, .
         setValue(key, value);
       }
     }
-  }, [entity, reset, setValue]);
+  }, [open]);
 
   const onSubmit = (data) => {
     reset();

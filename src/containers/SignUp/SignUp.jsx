@@ -8,6 +8,8 @@ import { useRegister } from '../../hooks/auth/register';
 import { useCheckVerificationCode } from '../../hooks/auth/checkVerificationCode';
 import { useSendVerificationCode } from '../../hooks/auth/sendVerificationCode';
 import TraverButton from '../../components/TraverButton/TraverButton';
+import useAlert from '../../hooks/alert';
+import { ALERT_MESSAGE_ON_SUCCESSFUL_REGISTRATION } from '../../utils/constraints';
 
 const SignUp = () => {
   const [step, setStep] = useState(0);
@@ -16,6 +18,7 @@ const SignUp = () => {
   const { checkVerificationCode } = useCheckVerificationCode();
   const { sendVerificationCode } = useSendVerificationCode();
   const navigate = useNavigate();
+  const openAlert = useAlert();
 
   const onFormSubmit = (data) => {
     if (step === 0) {
@@ -34,6 +37,7 @@ const SignUp = () => {
     } else {
       checkVerificationCode({ email, verificationCode: data.verificationCode }, () => {
         navigate('/login');
+        openAlert(ALERT_MESSAGE_ON_SUCCESSFUL_REGISTRATION, 'success');
       });
     }
   };

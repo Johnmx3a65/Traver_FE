@@ -23,7 +23,7 @@ export const useAddCategory = () => {
       })
       .catch((e) => {
         removeLoading(ACTION_NAME);
-        if (e?.originalStatus === 409) {
+        if (e?.status === 409) {
           openAlert(ALERT_MESSAGE_CATEGORY_ALREADY_EXIST, 'error');
         } else {
           openAlert(ALERT_MESSAGE_ON_FAILURE, 'error');

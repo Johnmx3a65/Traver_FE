@@ -35,8 +35,8 @@ export const PhotoSchema = z.object({
 });
 
 export const PhotoDefaultValues = {
-  id: null,
+  id: '',
   previewUrl: '',
   fullUrl: '',
-  locationId: null,
+  locationId: '',
 };

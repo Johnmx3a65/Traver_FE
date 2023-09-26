@@ -1,5 +1,5 @@
 import React, { Fragment, useRef, useState } from 'react';
-import { Card, CardContent, CardHeader, Collapse, Container, Grid, IconButton } from '@mui/material';
+import { Card, CardContent, CardHeader, Collapse, Container, Grid, IconButton, Tooltip } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import useAlert from '../../../hooks/alert';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
@@ -108,22 +108,26 @@ const Photos = () => {
                 title={l.name}
                 action={
                   <Fragment>
-                    <IconButton
-                      onClick={() => {
-                        location.current = l;
-                        photo.current = null;
-                        setUpdatePhotoDialogOpen(true);
-                      }}
-                    >
-                      <AddAPhotoIcon />
-                    </IconButton>
+                    <Tooltip title={'Добави снимка'}>
+                      <IconButton
+                        onClick={() => {
+                          location.current = l;
+                          photo.current = null;
+                          setUpdatePhotoDialogOpen(true);
+                        }}
+                      >
+                        <AddAPhotoIcon />
+                      </IconButton>
+                    </Tooltip>
                     <ExpandButton
                       expand={l.id === expandedLocationId}
                       onClick={() => handleExpandClick(l.id)}
                       aria-expanded={l.id === expandedLocationId}
                       aria-label='show more'
                     >
-                      <ExpandMoreIcon />
+                      <Tooltip title={l.id === expandedLocationId ? 'Скрий снимките' : 'Покажи снимки'}>
+                        <ExpandMoreIcon />
+                      </Tooltip>
                     </ExpandButton>
                   </Fragment>
                 }

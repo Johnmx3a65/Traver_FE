@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, IconButton, Tooltip, Typography } from '@mui/material';
 import React, { Fragment } from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
@@ -11,12 +11,16 @@ const AdminPhotoCard = ({ photo, onEdit, onDelete }) => {
         title={photo.id}
         action={
           <Fragment>
-            <IconButton onClick={onEdit}>
-              <EditOutlinedIcon />
-            </IconButton>
-            <IconButton onClick={onDelete}>
-              <DeleteOutlinedIcon />
-            </IconButton>
+            <Tooltip title={'Промени снимка'}>
+              <IconButton onClick={onEdit}>
+                <EditOutlinedIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={'Изтрий снимка'}>
+              <IconButton onClick={onDelete}>
+                <DeleteOutlinedIcon />
+              </IconButton>
+            </Tooltip>
           </Fragment>
         }
       />

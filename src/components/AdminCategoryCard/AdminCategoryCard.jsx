@@ -1,5 +1,5 @@
 import styles from './AdminCategoryCard.module.css';
-import { Box, Card, CardContent, IconButton, Typography } from '@mui/material';
+import { Box, Card, CardContent, IconButton, Tooltip, Typography } from '@mui/material';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import React from 'react';
@@ -13,12 +13,16 @@ const AdminCategoryCard = ({ category, onEdit, onDelete }) => {
             {category.name}
           </Typography>
           <Box>
-            <IconButton onClick={onEdit}>
-              <EditOutlinedIcon />
-            </IconButton>
-            <IconButton onClick={onDelete}>
-              <DeleteOutlinedIcon />
-            </IconButton>
+            <Tooltip title={'Промени категория'}>
+              <IconButton onClick={onEdit}>
+                <EditOutlinedIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={'Изтрий категория'}>
+              <IconButton onClick={onDelete}>
+                <DeleteOutlinedIcon />
+              </IconButton>
+            </Tooltip>
           </Box>
         </Box>
         <Box className={styles.contentSingles}>

@@ -45,7 +45,7 @@ export const LocationSchema = z.object({
 });
 
 export const LocationDefaultValues = {
-  id: null,
+  id: '',
   categoryId: 2,
   name: '',
   picture: '',
